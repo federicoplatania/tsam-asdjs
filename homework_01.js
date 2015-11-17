@@ -5,7 +5,7 @@ function ex_1_I(x){
 
 function sumwhileneg(myarray){
     var tot = 0;
-    for (i= 0; i < myarray.length && myarray[i] < 0; i++){
+    for (var i= 0; i < myarray.length && myarray[i] > 0; i++){
         tot += myarray[i];
     }
     return tot;
