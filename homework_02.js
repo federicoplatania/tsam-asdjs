@@ -88,25 +88,23 @@ function ex_11_F(a){
     return placeF(a);
 }
 function placeF(a){
-    return filterodd(a).concat(filtereven(a))
+    var tarray = a.filter(checkeven);
+    var tarrayodd = a.filter(checkodd);
+    return tarrayodd.concat(tarray);
 }
 
-function filtereven(a){
-    var tarray = [];
-    for (var i = 0; i < a.length; i++){
-        if (a[i]%2 == 0){
-            tarray.push(a[i]);
-        }
-    }
-    return tarray;
+function checkeven(x){
+    if (x%2 == 0)
+        return true;
+    else 
+        return false;
+    
 }
 
-function filterodd(a){
-    var tarray = [];
-    for (var i = 0; i < a.length; i++){
-        if (a[i]%2 !== 0){
-            tarray.push(a[i]);
-        }
-    }
-    return tarray;
+function checkodd(x){
+    if (x%2 !== 0)
+        return true;
+    else 
+        return false;
+    
 }
