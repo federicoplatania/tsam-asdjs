@@ -1,5 +1,5 @@
-//1
-Array.prototype.sumwhileneg = function (){ 
+//1 sumwhileneg
+Array.prototype.ex_1 = function (){ 
     var tot=0;
     this.every(x => {
         if (x>0){
@@ -10,15 +10,15 @@ Array.prototype.sumwhileneg = function (){
     )
     return tot;
 }
-//3
-Array.prototype.media = function () {
+//media
+Array.prototype.ex_3 = function () {
         if (this.length == 0){
         return 0;
     }else{
        return this.reduce((acc,x) => acc + x,0) / this.length;
     }
 }
-//9
+/*
 Array.prototype.revert = function () {
     var b = [];
     var c = this.length-1;
@@ -28,8 +28,9 @@ Array.prototype.revert = function () {
     }
     return a=b;
 }
-//11
-Array.prototype.oddfirst = function () {
+*/
+//11 oddfirst
+Array.prototype.ex_11 = function () {
     var tarray = this.filter(x => (x%2 == 0));
     var tarrayodd = this.filter(x => !(x%2 == 0));
     return tarrayodd.concat(tarray);
