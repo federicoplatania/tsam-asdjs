@@ -16,16 +16,21 @@ function ex_1_F(x){
     )
     return tot;
 }
+
+//2
+
+function range(n){
+    a = [];
+    for (var i = 0; i<n;i++){
+        a[i]=i
+    }
+    return a;
+}
+function summOddRF(n){
+    return range(n).map(x =>2*x+1).reduce((acc,x) => acc + x)
+}
 function ex_2_F(x){
-    var tmparray= [];
-    x.every(x => {
-        if (x>0){
-            tmparray.push(x);
-        }
-        return x>0;
-        }
-    )
-    return tmparray.reduce((acc,x) =>acc + x, 0)
+    return summOddRF(x);
 }
 //3
 function ex_3_F(myarray){
