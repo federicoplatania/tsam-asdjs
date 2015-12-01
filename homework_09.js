@@ -52,20 +52,11 @@ Stack.prototype.popAll = function (callback) {
         callback(this.pop());
     }
 }
-/*
-function insert (myarray){
-    var stackpari = new Stack();
-    var stackdispari = new Stack();
-    for (var i = 0; i < myarray.length; i++){
-        if (myarray[i]%2 == 0){
-            stackpari.push(myarray[i]);          
-        } else {
-            stackdispari.push(myarray[i])
-        }
-    }
-   
+
+function ex_3(myarray){
+    return moltiplicaStack(myarray);
 }
-*/
+
 function moltiplicaStack(myarray){
     var pariStack = new Stack();
     var dispariStack = new Stack();
@@ -83,7 +74,4 @@ function moltiplicaStack(myarray){
     var s = 0;
     risultatoStack.popAll(function(x){s+=x;});
     return s;
-}
-function ex_3(myarray){
-    return moltiplicaStack(myarray);
 }
